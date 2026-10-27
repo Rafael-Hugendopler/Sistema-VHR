@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VHR Truck Center | Clientes</title>
+
+    <link rel="stylesheet" href="../início/projeto.css">
+</head>
+
+<body>
+
+    <div class="system">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+
+                <div class="logo">
+                    <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+                </div>
+
+                <div class="brand">
+                    <strong>TRUCK CENTER</strong>
+                    <span>MECÂNICA DIESEL</span>
+                </div>
+
+            </div>
+
+
+            <div class="menu">
+
+                <p class="menu-title">
+                    MENU PRINCIPAL
+                </p>
+
+
+                <a href="../início/dashboard.html" class="menu-item ">
+                    <span>⌂</span> Dashboard
+                </a>
+
+
+                <a href="clientes.html" class="menu-item active">
+                    <span>♙</span> Clientes
+                </a>
+
+
+                <a href="../veículos/veiculos.html" class="menu-item">
+                    <span>▣</span> Veículos
+                </a>
+
+
+               
+            <a href="../serviços/ordem-servico.html" class="menu-item">
+                <span>⚙</span>
+                Ordem de Serviço
+                </a>
+
+
+                <a href="../peças/peças.html" class="menu-item">
+                    <span>▤</span> Peças
+                </a>
+
+
+                <a href="../início/financeiro.html" class="menu-item">
+                    <span>R$</span> Financeiro
+                </a>
+
+
+                <p class="menu-title sistema-title">
+                    SISTEMA
+                </p>
+
+
+                <a href="../início/configurações.html" class="menu-item">
+                    <span>⚙</span> Configurações
+                </a>
+
+                <a href="../início/projeto.html" class="logout">
+                    ↪ Sair
+                </a>
+
+            </div>
+
+            <!-- USUÁRIO -->
+            <div class="user-area">
+
+                <div class="user-name">
+                    VH
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Usuário ativo</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar">
+
+                <div>
+
+                    <p class="welcome">
+                        GERENCIAMENTO
+                    </p>
+
+                    <h1>
+                        Clientes
+                    </h1>
+
+                    <p class="subtitle">
+                        Gerencie os clientes cadastrados na VHR Truck Center.
+                    </p>
+
+                </div>
+
+
+                <a href="cadastrar-cliente.html" class="new-button">
+                    ＋ Novo cliente
+                </a>
+
+            </header>
+
+
+            <!-- PAINEL -->
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            CLIENTES
+                        </span>
+
+                        <h2>
+                            Clientes cadastrados
+                        </h2>
+
+                    </div>
+
+                    <span class="client-count" id="contadorClientes">
+                        3 clientes
+                    </span>
+
+                </div>
+
+
+                <!-- PESQUISA -->
+                <div class="search-area">
+
+                    <input
+                        type="text"
+                        id="pesquisaCliente"
+                        placeholder="Pesquisar por nome, CPF ou telefone..."
+                    >
+
+                    <button type="button" onclick="pesquisarClientes()">
+                        Pesquisar
+                    </button>
+
+                </div>
+
+
+                <!-- TABELA -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    CLIENTE
+                                </th>
+
+                                <th>
+                                    CPF
+                                </th>
+
+                                <th>
+                                    TELEFONE
+                                </th>
+
+                                <th>
+                                    CIDADE
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    AÇÕES
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaClientes">
+
+                            <!-- CLIENTE 1 -->
+
+<tr>
+
+    <td>
+
+        <strong>
+            João da Silva
+        </strong>
+
+        <small>
+            Cliente • Pessoa física
+        </small>
+
+    </td>
+
+    <td>
+        123.456.789-00
+    </td>
+
+    <td>
+        (51) 99999-1111
+    </td>
+
+    <td>
+        Viamão
+    </td>
+
+    <td>
+
+        <span class="status active-status">
+            Ativo
+        </span>
+
+    </td>
+
+    <td>
+
+                                    <div class="actions">
+
+        <a href="visualizar-c.html" class="action view">
+            Visualizar
+        </a>
+
+        <a href="editar-clientes.html" class="action edit">
+            Editar
+        </a>
+
+        <button
+            type="button"
+            class="action delete"
+            onclick="confirmarExclusaoCliente(this)"
+        >
+            Excluir
+        </button>
+
+                                        </div>
+
+                                </td>
+
+</tr>
+
+
+                            <!-- CLIENTE 1 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Carlos
+                                    </strong>
+
+                                    <small>
+                                        Cliente • Pessoa física
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    123.456.789-00
+                                </td>
+
+                                <td>
+                                    (51) 99999-1111
+                                </td>
+
+                                <td>
+                                    Viamão
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Ativo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-carlos.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-carlos.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button
+                                        type="button"
+                                        class="action delete"
+                                        onclick="confirmarExclusaoCliente(this)"
+                                    >
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- CLIENTE 2 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Pedro Lima
+                                    </strong>
+
+                                    <small>
+                                        Cliente • Pessoa física
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    987.654.321-00
+                                </td>
+
+                                <td>
+                                    (51) 98888-2222
+                                </td>
+
+                                <td>
+                                    Porto Alegre
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Ativo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-pedro.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-pedro.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button
+                                        type="button"
+                                        class="action delete"
+                                        onclick="confirmarExclusaoCliente(this)"
+                                    >
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- CLIENTE 3 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Marcos Oliveira
+                                    </strong>
+
+                                    <small>
+                                        Cliente • Pessoa física
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    456.789.123-00
+                                </td>
+
+                                <td>
+                                    (51) 97777-3333
+                                </td>
+
+                                <td>
+                                    Canoas
+                                </td>
+
+                                <td>
+
+                                    <span class="status inactive-status">
+                                        Inativo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-marcos.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="visualizar-marcos.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button
+                                        type="button"
+                                        class="action delete"
+                                        onclick="confirmarExclusaoCliente(this)"
+                                    >
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // =========================
+        // PESQUISAR CLIENTES
+        // =========================
+
+        function pesquisarClientes() {
+
+            const pesquisa = document
+                .getElementById("pesquisaCliente")
+                .value
+                .toLowerCase()
+                .trim();
+
+            const linhas = document
+                .querySelectorAll("#listaClientes tr");
+
+            let encontrados = 0;
+
+
+            linhas.forEach(function(linha) {
+
+                const texto = linha
+                    .textContent
+                    .toLowerCase();
+
+
+                if (texto.includes(pesquisa)) {
+
+                    linha.style.display = "";
+                    encontrados++;
+
+                } else {
+
+                    linha.style.display = "none";
+
+                }
+
+            });
+
+
+            atualizarContadorClientes(encontrados);
+
+        }
+
+
+        // Pesquisa enquanto digita
+
+        document
+            .getElementById("pesquisaCliente")
+            .addEventListener(
+                "input",
+                pesquisarClientes
+            );
+
+
+        // =========================
+        // EXCLUIR CLIENTE
+        // =========================
+
+        function confirmarExclusaoCliente(botao) {
+
+            const linha = botao.closest("tr");
+
+
+            const nome = linha
+                .querySelector("strong")
+                .textContent
+                .trim();
+
+
+            const confirmar = confirm(
+                "Tem certeza que deseja excluir o cliente " +
+                nome +
+                "?"
+            );
+
+
+            if (confirmar) {
+
+                linha.remove();
+
+                atualizarContadorClientes();
+
+
+                alert(
+                    "Cliente " +
+                    nome +
+                    " excluído com sucesso!"
+                );
+
+            }
+
+        }
+
+
+        // =========================
+        // ATUALIZAR CONTADOR
+        // =========================
+
+        function atualizarContadorClientes(quantidade) {
+
+            if (quantidade === undefined) {
+
+                quantidade = document
+                    .querySelectorAll("#listaClientes tr")
+                    .length;
+
+            }
+
+
+            const contador =
+                document.getElementById(
+                    "contadorClientes"
+                );
+
+
+            contador.textContent =
+                quantidade +
+                (
+                    quantidade === 1
+                        ? " cliente"
+                        : " clientes"
+                );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

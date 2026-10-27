@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VHR Truck Center | Ordem de Serviço</title>
+
+    <link rel="stylesheet" href="../início/projeto.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+</head>
+
+<body>
+    
+
+<div class="system">
+
+    <!-- MENU -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo">
+                <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+            </div>
+
+            <div class="brand">
+                <strong>TRUCK CENTER</strong>
+                <span>MECÂNICA DIESEL</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu">
+
+            <p class="menu-title">
+                MENU PRINCIPAL
+            </p>
+
+            <a href="../início/dashboard.html" class="menu-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="../clientes/clientes.html" class="menu-item">
+                <span>♙</span>
+                Clientes
+            </a>
+
+            <a href="../veículos/veiculos.html" class="menu-item">
+                <span>▣</span>
+                Veículos
+            </a>
+
+            <a href="ordem-servico.html" class="menu-item active">
+                <span>⚙</span>
+                Ordem de Serviço
+            </a>
+
+            <a href="../peças/peças.html" class="menu-item">
+                <span>▤</span>
+                Peças
+            </a>
+
+            <a href="../início/financeiro.html" class="menu-item">
+                <span>R$</span>
+                Financeiro
+            </a>
+
+
+            <p class="menu-title sistema-title">
+                SISTEMA
+            </p>
+
+            <a href="../início/configurações.html" class="menu-item">
+                <span>⚙</span>
+                Configurações
+            </a>
+
+        </div>
+
+
+        <div class="user-area">
+
+            <div class="user-name">
+                VH
+            </div>
+
+            <div>
+                <strong>Administrador</strong>
+                <small>Usuário ativo</small>
+            </div>
+
+            <a href="../início/projeto.html" class="logout">
+                ↪ Sair
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEUDO -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    GERENCIAMENTO
+                </p>
+
+                <h1>
+                    Ordem de Serviço
+                </h1>
+
+                <p class="subtitle">
+                    Cadastre e acompanhe os serviços realizados pela VHR Truck Center.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <div class="os-container">
+
+
+            <!-- CADASTRO -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            CADASTRO
+                        </span>
+
+                        <h2>
+                            Nova Ordem de Serviço
+                        </h2>
+
+                    </div>
+
+                    <div class="os-number">
+                        OS Nº <span id="numeroOS">0001</span>
+                    </div>
+
+                </div>
+
+
+                <form id="formOrdemServico">
+
+
+                    <!-- CLIENTE E VEICULO -->
+
+                    <div class="form-section">
+
+                        
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="cliente">
+                                    Cliente
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cliente"
+                                    placeholder="Digite o nome do cliente"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="telefone">
+                                    Telefone
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="telefone"
+                                    placeholder="(00) 00000-0000"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="veiculo">
+                                    Veículo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="veiculo"
+                                    placeholder="Ex: Scania R450"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="placa">
+                                    Placa
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="placa"
+                                    placeholder="ABC-1234"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SERVICO -->
+
+                    <div class="form-section">
+
+                       
+
+                        <div class="form-grid three">
+
+                            <div class="form-group">
+
+                                <label for="tipoServico">
+                                    Tipo de serviço
+                                </label>
+
+                                <select id="tipoServico" required>
+
+                                    <option value="">
+                                        Selecione
+                                    </option>
+
+                                    <option>
+                                        Manutenção preventiva
+                                    </option>
+
+                                    <option>
+                                        Manutenção corretiva
+                                    </option>
+
+                                    <option>
+                                        Revisão
+                                    </option>
+
+                                    <option>
+                                        Troca de peças
+                                    </option>
+
+                                    <option>
+                                        Diagnóstico
+                                    </option>
+
+                                    <option>
+                                        Serviço elétrico
+                                    </option>
+
+                                    <option>
+                                        Outro
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="status">
+                                    Status
+                                </label>
+
+                                <select id="status">
+
+                                    <option>
+                                        Aberto
+                                    </option>
+
+                                    <option>
+                                        Em andamento
+                                    </option>
+
+                                    <option>
+                                        Finalizado
+                                    </option>
+
+                                    <option>
+                                        Aguardando peça
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="quilometragem">
+                                    Quilometragem
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="quilometragem"
+                                    placeholder="Ex: 125000"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="entrada">
+                                    Entrada
+                                </label>
+
+                                <input
+                                    type="datetime-local"
+                                    id="entrada"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="saida">
+                                    Saída
+                                </label>
+
+                                <input
+                                    type="datetime-local"
+                                    id="saida"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESCRICAO -->
+
+                    <div class="form-section">
+
+                       
+
+                        <div class="form-group">
+
+                            <label for="descricao">
+                                Descrição
+                            </label>
+
+                            <textarea
+                                id="descricao"
+                                placeholder="Descreva o serviço que será realizado..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MANUTENCOES -->
+
+                    <div class="form-section">
+
+                        <div class="maintenance-header">
+
+                            <div>
+
+                                <div class="form-section-title" style="margin-bottom: 4px;">
+                                    Manutenções e valores
+                                </div>
+
+                                
+                            </div>
+
+                            <button
+                                type="button"
+                                class="btn-add"
+                                onclick="adicionarManutencao()"
+                            >
+                                + Adicionar manutenção
+                            </button>
+
+                        </div>
+
+
+                        <table class="maintenance-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Manutenção
+                                    </th>
+
+                                    <th>
+                                        Descrição
+                                    </th>
+
+                                    <th>
+                                        Valor
+                                    </th>
+
+                                    <th>
+                                        Ação
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="listaManutencoes">
+
+                                <tr>
+
+                                    <td>
+                                        <input
+                                            type="text"
+                                            class="manutencao"
+                                            placeholder="Ex: Troca de óleo"
+                                        >
+                                    </td>
+
+                                    <td>
+                                        <input
+                                            type="text"
+                                            class="descricao-manutencao"
+                                            placeholder="Descrição"
+                                        >
+                                    </td>
+
+                                    <td>
+                                        <input
+                                            type="number"
+                                            step="0.01"
+                                            class="valor-manutencao"
+                                            placeholder="0,00"
+                                            oninput="calcularTotal()"
+                                        >
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="remove-btn"
+                                            onclick="removerManutencao(this)"
+                                        >
+                                            Excluir
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+                        <div class="total-area">
+
+                            <span class="total-label">
+                                Valor total:
+                            </span>
+
+                            <span
+                                class="total-value"
+                                id="valorTotal"
+                            >
+                                R$ 0,00
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OBSERVACOES -->
+
+                    <div class="form-section">
+
+                       
+
+                        <div class="form-group">
+
+                            <label for="observacoes">
+                                Observações
+                            </label>
+
+                            <textarea
+                                id="observacoes"
+                                placeholder="Digite alguma observação..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BOTOES -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="btn-secondary"
+                            onclick="limparFormulario()"
+                        >
+                            Limpar
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn-primary"
+                        >
+                            ✓ Cadastrar serviço
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-pdf"
+                            onclick="gerarPDF()"
+                        >
+                            Gerar PDF
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+
+            <!-- LISTA -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SERVIÇOS
+                        </span>
+
+                        <h2>
+                            Serviços cadastrados
+                        </h2>
+
+                    </div>
+
+                    <span id="contadorServicos">
+                        0 serviços
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="listaServicos"
+                    class="service-list"
+                ></div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="ordem-servico.js"></script>
+
+</body>
+
+</html>

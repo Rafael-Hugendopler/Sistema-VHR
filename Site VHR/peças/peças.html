@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VHR Truck Center | Peças</title>
+
+    <link rel="stylesheet" href="../início/projeto.css">
+</head>
+
+<body>
+
+    <div class="system">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+
+                <div class="logo">
+                    <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+                </div>
+
+                <div class="brand">
+                    <strong>TRUCK CENTER</strong>
+                    <span>MECÂNICA DIESEL</span>
+                </div>
+
+            </div>
+
+            <div class="menu">
+
+                <p class="menu-title">
+                    MENU PRINCIPAL
+                </p>
+
+                <a href="../início/dashboard.html" class="menu-item">
+                    <span>⌂</span> Dashboard
+                </a>
+
+                <a href="../clientes/clientes.html" class="menu-item">
+                    <span>♙</span> Clientes
+                </a>
+
+                <a href="../veículos/veiculos.html" class="menu-item">
+                    <span>▣</span> Veículos
+                </a>
+
+                <a href="../serviços/ordem-servico.html" class="menu-item">
+                <span>⚙</span>
+                Ordem de Serviço
+                </a>
+
+                <a href="peças.html" class="menu-item active">
+                    <span>▤</span> Peças
+                </a>
+
+                <a href="../início/financeiro.html" class="menu-item">
+                    <span>R$</span> Financeiro
+                </a>
+
+
+                <p class="menu-title sistema-title">
+                    SISTEMA
+                </p>
+
+                <a href="../início/configurações.html" class="menu-item">
+                    <span>⚙</span> Configurações
+                </a>
+
+                <a href="../início/projeto.html" class="logout">
+                    ↪ Sair
+                </a>
+
+            </div>
+
+            <div class="user-area">
+
+                <div class="user-name">
+                    VH
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Usuário ativo</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="welcome">
+                        ESTOQUE
+                    </p>
+
+                    <h1>
+                        Peças
+                    </h1>
+
+                    <p class="subtitle">
+                        Gerencie as peças e o estoque da VHR Truck Center.
+                    </p>
+
+                </div>
+
+                <a href="cadastrar-peca.html" class="new-button">
+                    ＋ Nova peça
+                </a>
+
+            </header>
+
+
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            ESTOQUE
+                        </span>
+
+                        <h2>
+                            Peças cadastradas
+                        </h2>
+
+                    </div>
+
+                    <span class="vehicle-count" id="contadorPecas">
+                        5 peças
+                    </span>
+
+                </div>
+
+
+                <div class="search-area">
+
+                    <input type="text" id="pesquisaPeca" placeholder="Pesquisar peça, código ou fabricante..." oninput="pesquisarPecas()">
+
+                    <button type="button" onclick="pesquisarPecas()">
+                        Pesquisar
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    PEÇA
+                                </th>
+
+                                <th>
+                                    CÓDIGO
+                                </th>
+
+                                <th>
+                                    FABRICANTE
+                                </th>
+
+                                <th>
+                                    ESTOQUE
+                                </th>
+
+                                <th>
+                                    PREÇO
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    AÇÕES
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaPecas">
+
+                            <!-- PEÇA 1 -->
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Filtro de óleo
+                                    </strong>
+
+                                    <small>
+                                        Filtro • Motor
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    FLT-001
+                                </td>
+
+                                <td>
+                                    Mann Filter
+                                </td>
+
+                                <td>
+                                    24 un.
+                                </td>
+
+                                <td>
+                                    R$ 89,90
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Em estoque
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-peca.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-peca.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusaoPeca(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PEÇA 2 -->
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Pastilha de freio
+                                    </strong>
+
+                                    <small>
+                                        Freio • Dianteiro
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    FR-245
+                                </td>
+
+                                <td>
+                                    Fras-le
+                                </td>
+
+                                <td>
+                                    12 un.
+                                </td>
+
+                                <td>
+                                    R$ 420,00
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Em estoque
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-pastilha.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-pastilha.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusaoPeca(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PEÇA 3 -->
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Correia do alternador
+                                    </strong>
+
+                                    <small>
+                                        Motor • Correia
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    COR-178
+                                </td>
+
+                                <td>
+                                    Gates
+                                </td>
+
+                                <td>
+                                    8 un.
+                                </td>
+
+                                <td>
+                                    R$ 156,90
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Em estoque
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-correia.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-correia.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusaoPeca(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PEÇA 4 -->
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Filtro de combustível
+                                    </strong>
+
+                                    <small>
+                                        Filtro • Combustível
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    FLC-092
+                                </td>
+
+                                <td>
+                                    Donaldson
+                                </td>
+
+                                <td>
+                                    3 un.
+                                </td>
+
+                                <td>
+                                    R$ 115,50
+                                </td>
+
+                                <td>
+
+                                    <span class="status inactive-status">
+                                        Estoque baixo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-filtro-combustivel.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-filtro.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusaoPeca(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PEÇA 5 -->
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Disco de embreagem
+                                    </strong>
+
+                                    <small>
+                                        Transmissão • Embreagem
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    EMB-550
+                                </td>
+
+                                <td>
+                                    Sachs
+                                </td>
+
+                                <td>
+                                    0 un.
+                                </td>
+
+                                <td>
+                                    R$ 1.280,00
+                                </td>
+
+                                <td>
+
+                                    <span class="status inactive-status">
+                                        Sem estoque
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-disco-embreagem.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-disco.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusaoPeca(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script>
+        // PESQUISAR PEÇAS
+        function pesquisarPecas() {
+
+            const pesquisa = document
+                .getElementById("pesquisaPeca")
+                .value
+                .toLowerCase()
+                .trim();
+
+            const linhas = document.querySelectorAll("#listaPecas tr");
+
+            linhas.forEach(function(linha) {
+
+                const texto = linha.textContent.toLowerCase();
+
+                if (texto.includes(pesquisa)) {
+
+                    linha.style.display = "";
+
+                } else {
+
+                    linha.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        // EXCLUIR PEÇA
+        function confirmarExclusaoPeca(botao) {
+
+            const linha = botao.closest("tr");
+
+            const nomePeca = linha
+                .querySelector("strong")
+                .textContent
+                .trim();
+
+            const codigo = linha
+                .querySelectorAll("td")[1]
+                .textContent
+                .trim();
+
+            const confirmar = confirm(
+                "Tem certeza que deseja excluir a peça?\n\n" +
+                nomePeca + " (" + codigo + ")"
+            );
+
+            if (confirmar) {
+
+                linha.remove();
+
+                atualizarContadorPecas();
+
+                alert("Peça excluída com sucesso!");
+
+            }
+
+        }
+
+
+        // ATUALIZAR CONTADOR
+        function atualizarContadorPecas() {
+
+            const quantidade = document
+                .querySelectorAll("#listaPecas tr")
+                .length;
+
+            const contador = document.getElementById("contadorPecas");
+
+            if (quantidade === 1) {
+
+                contador.textContent = "1 peça";
+
+            } else {
+
+                contador.textContent = quantidade + " peças";
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

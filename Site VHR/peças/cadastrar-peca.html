@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VHR Truck Center | Cadastrar peça</title>
+
+    <link rel="stylesheet" href="../início/projeto.css">
+
+</head>
+
+<body>
+
+<div class="system">
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo">
+                <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+            </div>
+
+            <div class="brand">
+                <strong>TRUCK CENTER</strong>
+                <span>MECÂNICA DIESEL</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu">
+
+            <p class="menu-title">
+                MENU PRINCIPAL
+            </p>
+
+            <a href="../início/dashboard.html" class="menu-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="../clientes/clientes.html" class="menu-item">
+                <span>♙</span>
+                Clientes
+            </a>
+
+            <a href="../veículos/veiculos.html" class="menu-item">
+                <span>▣</span>
+                Veículos
+            </a>
+
+            <a href="../serviços/ordem-servico.html" class="menu-item">
+                <span>⚙</span>
+                Ordem de Serviço
+            </a>
+
+            <a href="peças.html" class="menu-item active">
+                <span>▤</span>
+                Peças
+            </a>
+
+            <a href="../início/financeiro.html" class="menu-item">
+                <span>R$</span>
+                Financeiro
+            </a>
+
+
+            <p class="menu-title sistema-title">
+                SISTEMA
+            </p>
+
+            <a href="../início/configurações.html" class="menu-item">
+                <span>⚙</span>
+                Configurações
+            </a>
+
+            <a href="../início/projeto.html" class="logout">
+                ↪ Sair
+            </a>
+
+        </div>
+
+
+        <div class="user-area">
+
+            <div class="user-name">
+                VH
+            </div>
+
+            <div>
+                <strong>Administrador</strong>
+                <small>Usuário ativo</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    PEÇAS
+                </p>
+
+                <h1>
+                    Cadastrar peça
+                </h1>
+
+                <p class="subtitle">
+                    Cadastre uma nova peça no estoque da VHR Truck Center.
+                </p>
+
+            </div>
+
+            <a href="peças.html" class="back-button">
+                ← Voltar para peças
+            </a>
+
+        </header>
+
+
+        <section class="panel form-panel edit-client-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="section-label">
+                        CADASTRO
+                    </span>
+
+                    <h2>
+                        Informações da peça
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <form id="formPeca">
+
+
+                <div class="form-section">
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="codigo">
+                                CÓDIGO
+                            </label>
+
+                            <input
+                                type="text"
+                                id="codigo"
+                                name="codigo"
+                                placeholder="Digite o código"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="nome">
+                                NOME DA PEÇA
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Digite o nome da peça"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="marca">
+                                MARCA
+                            </label>
+
+                            <input
+                                type="text"
+                                id="marca"
+                                name="marca"
+                                placeholder="Digite a marca"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="categoria">
+                                CATEGORIA
+                            </label>
+
+                            <select
+                                id="categoria"
+                                name="categoria"
+                            >
+
+                                <option value="">
+                                    Selecione a categoria
+                                </option>
+
+                                <option value="filtros">
+                                    Filtros
+                                </option>
+
+                                <option value="freios">
+                                    Freios
+                                </option>
+
+                                <option value="motor">
+                                    Motor
+                                </option>
+
+                                <option value="suspensao">
+                                    Suspensão
+                                </option>
+
+                                <option value="eletrica">
+                                    Elétrica
+                                </option>
+
+                                <option value="transmissao">
+                                    Transmissão
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="quantidade">
+                                QUANTIDADE EM ESTOQUE
+                            </label>
+
+                            <input
+                                type="number"
+                                id="quantidade"
+                                name="quantidade"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="minimo">
+                                ESTOQUE MÍNIMO
+                            </label>
+
+                            <input
+                                type="number"
+                                id="minimo"
+                                name="minimo"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="preco">
+                                PREÇO DE VENDA
+                            </label>
+
+                            <input
+                                type="number"
+                                id="preco"
+                                name="preco"
+                                min="0"
+                                step="0.01"
+                                placeholder="0,00"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="fornecedor">
+                                FORNECEDOR
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fornecedor"
+                                name="fornecedor"
+                                placeholder="Nome do fornecedor"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="veiculo">
+                                APLICAÇÃO / VEÍCULO
+                            </label>
+
+                            <input
+                                type="text"
+                                id="veiculo"
+                                name="veiculo"
+                                placeholder="Ex: Volvo FH 540"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="ano">
+                                ANO / COMPATIBILIDADE
+                            </label>
+
+                            <input
+                                type="text"
+                                id="ano"
+                                name="ano"
+                                placeholder="Ex: 2020 - 2025"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <div class="form-group form-full">
+
+                        <label for="observacoes">
+                            OBSERVAÇÕES
+                        </label>
+
+                        <textarea
+                            id="observacoes"
+                            name="observacoes"
+                            placeholder="Digite alguma observação sobre a peça..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <a
+                        href="peças.html"
+                        class="cancel-button"
+                    >
+                        Cancelar
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        Cadastrar peça
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>VHR Truck Center | Visualizar Veículo</title>
+
+<link rel="stylesheet" href="../início/projeto.css">
+
+
+</head>
+
+<body>
+
+
+<div class="system">
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo">
+                <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+            </div>
+
+            <div class="brand">
+                <strong>TRUCK CENTER</strong>
+                <span>MECÂNICA DIESEL</span>
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <p class="menu-title">
+                MENU PRINCIPAL
+            </p>
+
+            <a href="../início/dashboard.html" class="menu-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="../clientes/clientes.html" class="menu-item">
+                <span>♙</span>
+                Clientes
+            </a>
+
+            <a href="veiculos.html" class="menu-item active">
+                <span>▣</span>
+                Veículos
+            </a>
+
+            <a href="../serviços/ordem-servico.html" class="menu-item">
+                <span>⚙</span>
+                Ordem de Serviço
+            </a>
+
+            <a href="../peças/peças.html" class="menu-item">
+                <span>▤</span>
+                Peças
+            </a>
+
+            <a href="../início/financeiro.html" class="menu-item">
+                <span>R$</span>
+                Financeiro
+            </a>
+
+            <p class="menu-title sistema-title">
+                SISTEMA
+            </p>
+
+            <a href="../início/configurações.html" class="menu-item">
+                <span>⚙</span>
+                Configurações
+            </a>
+
+            <a href="../início/projeto.html" class="logout">
+                ↪ Sair
+            </a>
+
+        </div>
+
+        <div class="user-area">
+
+            <div class="user-name">
+                VH
+            </div>
+
+            <div>
+                <strong>Administrador</strong>
+                <small>Usuário ativo</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    VEÍCULOS
+                </p>
+
+                <h1>
+                    Visualizar veículo
+                </h1>
+
+                <p class="subtitle">
+                    Consulte os dados cadastrais do veículo.
+                </p>
+
+            </div>
+
+            <a href="veiculos.html" class="back-button">
+                ← Voltar para veículos
+            </a>
+
+        </header>
+
+
+        <section class="panel form-panel edit-client-panel view-client-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="section-label">
+                        VISUALIZAÇÃO
+                    </span>
+
+                    <h2>
+                        Dados do veículo
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <form>
+
+
+                <div class="form-section">
+
+                    
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="placa">
+                                PLACA
+                            </label>
+
+                            <input
+                                type="text"
+                                id="placa"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="form-group form-full">
+
+                            <label for="quilometragem">
+                                QUILOMETRAGEM
+                            </label>
+
+                            <input
+                                type="text"
+                                id="quilometragem"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="marca">
+                                MARCA
+                            </label>
+
+                            <input
+                                type="text"
+                                id="marca"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="modelo">
+                                MODELO
+                            </label>
+
+                            <input
+                                type="text"
+                                id="modelo"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="ano">
+                                ANO
+                            </label>
+
+                            <input
+                                type="text"
+                                id="ano"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="cor">
+                                COR
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cor"
+                                readonly
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                 
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="tipo">
+                                TIPO DE VEÍCULO
+                            </label>
+
+                            <select
+                                id="tipo"
+                                disabled
+                            >
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="caminhao">
+                                    Caminhão
+                                </option>
+
+                                <option value="cavalo">
+                                    Cavalo Mecânico
+                                </option>
+
+                                <option value="carreta">
+                                    Carreta
+                                </option>
+
+                                <option value="onibus">
+                                    Ônibus
+                                </option>
+
+                                <option value="outro">
+                                    Outro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="combustivel">
+                                COMBUSTÍVEL
+                            </label>
+
+                            <select
+                                id="combustivel"
+                                disabled
+                            >
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="diesel">
+                                    Diesel
+                                </option>
+
+                                <option value="flex">
+                                    Flex
+                                </option>
+
+                                <option value="gasolina">
+                                    Gasolina
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                       
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    
+
+
+                    <div class="form-group">
+
+                        <label for="observacoes">
+                            OBSERVAÇÕES
+                        </label>
+
+                        <textarea
+                            id="observacoes"
+                            readonly
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <a
+                        href="veiculos.html"
+                        class="cancel-button"
+                    >
+                        Voltar
+                    </a>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+</body>
+
+</html>

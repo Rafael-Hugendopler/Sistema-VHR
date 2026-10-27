@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VHR Truck Center | Veículos</title>
+
+    <link rel="stylesheet" href="../início/projeto.css">
+</head>
+
+<body>
+
+    <div class="system">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+
+                <div class="logo">
+                    <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+                </div>
+
+                <div class="brand">
+                    <strong>TRUCK CENTER</strong>
+                    <span>MECÂNICA DIESEL</span>
+                </div>
+
+            </div>
+
+
+            <div class="menu">
+
+                <p class="menu-title">
+                    MENU PRINCIPAL
+                </p>
+
+
+                <a href="../início/dashboard.html" class="menu-item ">
+                    <span>⌂</span> Dashboard
+                </a>
+
+
+                <a href="../clientes/clientes.html" class="menu-item">
+                    <span>♙</span> Clientes
+                </a>
+
+
+                <a href="veiculos.html" class="menu-item active">
+                    <span>▣</span> Veículos
+                </a>
+
+
+                <a href="../serviços/ordem-servico.html" class="menu-item">
+                <span>⚙</span>
+                Ordem de Serviço
+                </a>
+
+
+                <a href="../peças/peças.html" class="menu-item">
+                    <span>▤</span> Peças
+                </a>
+
+
+                <a href="../início/financeiro.html" class="menu-item">
+                    <span>R$</span> Financeiro
+                </a>
+
+
+                <p class="menu-title sistema-title">
+                    SISTEMA
+                </p>
+
+
+                <a href="../início/configurações.html" class="menu-item">
+                    <span>⚙</span> Configurações
+                </a>
+
+                <a href="../início/projeto.html" class="logout">
+                    ↪ Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar">
+
+                <div>
+
+                    <p class="welcome">
+                        GERENCIAMENTO
+                    </p>
+
+                    <h1>
+                        Veículos
+                    </h1>
+
+                    <p class="subtitle">
+                        Gerencie os veículos cadastrados na VHR Truck Center.
+                    </p>
+
+                </div>
+
+
+                <a href="cadastrar-veiculos.html" class="new-button">
+                    ＋ Novo veículo
+                </a>
+
+            </header>
+
+
+
+            <!-- PAINEL -->
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            FROTA
+                        </span>
+
+                        <h2>
+                            Veículos cadastrados
+                        </h2>
+
+                    </div>
+
+                    <span class="client-count" id="contadorVeiculos">
+                        4 veículos
+                    </span>
+
+                </div>
+
+
+
+                <!-- PESQUISA -->
+                <div class="search-area">
+
+                    <input type="text" id="pesquisaVeiculo" placeholder="Pesquisar por placa, modelo ou proprietário...">
+
+                    <button type="button" onclick="pesquisarVeiculos()">
+                        Pesquisar
+                    </button>
+
+                </div>
+
+
+
+                <!-- TABELA -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    VEÍCULO
+                                </th>
+
+                                <th>
+                                    PLACA
+                                </th>
+
+                                <th>
+                                    ANO
+                                </th>
+
+                                <th>
+                                    PROPRIETÁRIO
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    AÇÕES
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaVeiculos">
+
+
+                            <!-- VEÍCULO 1 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Volvo FH 540
+                                    </strong>
+
+                                    <small>
+                                        Caminhão • Diesel
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    ABC-1D23
+                                </td>
+
+                                <td>
+                                    2023
+                                </td>
+
+                                <td>
+                                    João da Silva
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Ativo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-veiculo.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-veiculo.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusao(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- VEÍCULO 2 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Scania R450
+                                    </strong>
+
+                                    <small>
+                                        Caminhão • Diesel
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    DEF-4E56
+                                </td>
+
+                                <td>
+                                    2022
+                                </td>
+
+                                <td>
+                                    Carlos Souza
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Ativo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-scania.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-scania.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusao(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- VEÍCULO 3 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Mercedes-Benz Actros
+                                    </strong>
+
+                                    <small>
+                                        Caminhão • Diesel
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    GHI-7J89
+                                </td>
+
+                                <td>
+                                    2021
+                                </td>
+
+                                <td>
+                                    Pedro Lima
+                                </td>
+
+                                <td>
+
+                                    <span class="status active-status">
+                                        Ativo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-mercedes.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-mercedes.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusao(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- VEÍCULO 4 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        DAF XF 530
+                                    </strong>
+
+                                    <small>
+                                        Caminhão • Diesel
+                                    </small>
+
+                                </td>
+
+                                <td>
+                                    JKL-2M45
+                                </td>
+
+                                <td>
+                                    2020
+                                </td>
+
+                                <td>
+                                    Marcos Oliveira
+                                </td>
+
+                                <td>
+
+                                    <span class="status inactive-status">
+                                        Inativo
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="actions">
+
+                                    <a href="visualizar-daf.html" class="action view">
+                                        Visualizar
+                                    </a>
+
+                                    <a href="editar-daf.html" class="action edit">
+                                        Editar
+                                    </a>
+
+                                    <button type="button" class="action delete" onclick="confirmarExclusao(this)">
+                                        Excluir
+                                    </button>
+
+                                                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+        // =========================
+        // PESQUISAR VEÍCULOS
+        // =========================
+
+        function pesquisarVeiculos() {
+
+            const pesquisa = document
+                .getElementById("pesquisaVeiculo")
+                .value
+                .toLowerCase()
+                .trim();
+
+            const linhas = document
+                .querySelectorAll("#listaVeiculos tr");
+
+            let encontrados = 0;
+
+
+            linhas.forEach(function(linha) {
+
+                const texto = linha
+                    .textContent
+                    .toLowerCase();
+
+
+                if (texto.includes(pesquisa)) {
+
+                    linha.style.display = "";
+                    encontrados++;
+
+                } else {
+
+                    linha.style.display = "none";
+
+                }
+
+            });
+
+
+            atualizarContador(encontrados);
+
+        }
+
+
+
+        // Pesquisa enquanto digita
+
+        document
+            .getElementById("pesquisaVeiculo")
+            .addEventListener(
+                "input",
+                pesquisarVeiculos
+            );
+
+
+
+        // =========================
+        // EXCLUIR VEÍCULO
+        // =========================
+
+        function confirmarExclusao(botao) {
+
+            const linha = botao.closest("tr");
+
+
+            const nome = linha
+                .querySelector("strong")
+                .textContent
+                .trim();
+
+
+            const placa = linha
+                .children[1]
+                .textContent
+                .trim();
+
+
+            const confirmar = confirm(
+                "Tem certeza que deseja excluir o veículo " +
+                nome +
+                " (" +
+                placa +
+                ")?"
+            );
+
+
+            if (confirmar) {
+
+                linha.remove();
+
+                atualizarContador();
+
+                alert(
+                    "Veículo " +
+                    nome +
+                    " excluído com sucesso!"
+                );
+
+            }
+
+        }
+
+
+
+        // =========================
+        // ATUALIZAR CONTADOR
+        // =========================
+
+        function atualizarContador(quantidade) {
+
+            if (quantidade === undefined) {
+
+                quantidade = document
+                    .querySelectorAll("#listaVeiculos tr")
+                    .length;
+
+            }
+
+
+            const contador =
+                document.getElementById(
+                    "contadorVeiculos"
+                );
+
+
+            contador.textContent =
+                quantidade +
+                (
+                    quantidade === 1 ?
+                    " veículo" :
+                    " veículos"
+                );
+
+        }
+    </script>
+
+</body>
+
+</html>

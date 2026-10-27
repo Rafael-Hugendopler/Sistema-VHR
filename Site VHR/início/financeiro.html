@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VHR Truck Center | Financeiro</title>
+
+    <link rel="stylesheet" href="projeto.css">
+</head>
+
+<body>
+
+    <div class="system">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+
+                <div class="logo">
+                    <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+                </div>
+
+                <div class="brand">
+                    <strong>TRUCK CENTER</strong>
+                    <span>MECÂNICA DIESEL</span>
+                </div>
+
+            </div>
+
+
+            <div class="menu">
+
+                <p class="menu-title">
+                    MENU PRINCIPAL
+                </p>
+
+                <a href="dashboard.html" class="menu-item">
+                    <span>⌂</span> Dashboard
+                </a>
+
+                <a href="../clientes/clientes.html" class="menu-item">
+                    <span>♙</span> Clientes
+                </a>
+
+                <a href="../veículos/veiculos.html" class="menu-item">
+                    <span>▣</span> Veículos
+                </a>
+
+                <a href="../serviços/ordem-servico.html" class="menu-item">
+                    <span>⚙</span>
+                    Ordem de Serviço
+                </a>
+
+                <a href="../peças/peças.html" class="menu-item">
+                    <span>▤</span> Peças
+                </a>
+
+                <a href="financeiro.html" class="menu-item active">
+                    <span>R$</span> Financeiro
+                </a>
+
+
+                <p class="menu-title sistema-title">
+                    SISTEMA
+                </p>
+
+                <a href="configurações.html" class="menu-item">
+                    <span>⚙</span> Configurações
+                </a>
+
+                <a href="projeto.html" class="logout">
+                    ↪ <span>Sair</span>
+                </a>
+
+            </div>
+
+
+            <div class="user-area">
+
+                <div class="user-name">
+                    VH
+                </div>
+
+                <div class="user-info">
+                    <strong>Administrador</strong>
+
+                    <small>
+                        <span class="user-status"></span>
+                        Usuário ativo
+                    </small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main">
+
+            <!-- TOPO -->
+            <header class="topbar">
+
+                <div>
+
+                    <p class="welcome">
+                        CONTROLE FINANCEIRO
+                    </p>
+
+                    <h1>
+                        Financeiro
+                    </h1>
+
+                    <p class="subtitle">
+                        Acompanhe os valores recebidos, despesas e lucro da VHR Truck Center
+                    </p>
+
+                </div>
+
+
+                
+            </header>
+
+
+            <!-- CARDS FINANCEIROS -->
+            <section class="finance-cards">
+
+                <!-- RECEITAS -->
+                <div class="finance-card">
+
+                    <div class="finance-card-icon">
+                        ↑
+                    </div>
+
+                    <div>
+                        <span>TOTAL RECEBIDO</span>
+
+                        <strong id="totalRecebido">
+                            R$ 0,00
+                        </strong>
+
+                        <small>
+                            Serviços realizados
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <!-- DESPESAS -->
+                <div class="finance-card">
+
+                    <div class="finance-card-icon expense">
+                        ↓
+                    </div>
+
+                    <div>
+                        <span>TOTAL DE DESPESAS</span>
+
+                        <strong id="totalDespesas">
+                            R$ 0,00
+                        </strong>
+
+                        <small>
+                            Gastos da empresa
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <!-- LUCRO -->
+                <div class="finance-card">
+
+                    <div class="finance-card-icon profit">
+                        $
+                    </div>
+
+                    <div>
+                        <span>LUCRO</span>
+
+                        <strong id="totalLucro">
+                            R$ 0,00
+                        </strong>
+
+                        <small>
+                            Receitas menos despesas
+                        </small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- REGISTRAR MOVIMENTAÇÃO -->
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            MOVIMENTAÇÃO
+                        </span>
+
+                        <h2>
+                            Registrar movimentação
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form class="finance-form" id="financeForm">
+
+                    <!-- TIPO -->
+                    <div class="finance-field">
+
+                        <label for="tipo">
+                            Tipo
+                        </label>
+
+                        <select id="tipo">
+
+                            <option value="entrada">
+                                Serviço recebido
+                            </option>
+
+                            <option value="despesa">
+                                Despesa
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DESCRIÇÃO -->
+                    <div class="finance-field">
+
+                        <label for="descricao">
+                            Descrição
+                        </label>
+
+                        <input
+                            type="text"
+                            id="descricao"
+                            placeholder="Ex: Revisão completa"
+                        >
+
+                    </div>
+
+
+                    <!-- CATEGORIA -->
+                    <div class="finance-field">
+
+                        <label for="categoria">
+                            Categoria
+                        </label>
+
+                        <select id="categoria">
+
+                            <option value="Serviço">
+                                Serviço
+                            </option>
+
+                            <option value="Peças">
+                                Peças
+                            </option>
+
+                            <option value="Salários">
+                                Salários
+                            </option>
+
+                            <option value="Aluguel">
+                                Aluguel
+                            </option>
+
+                            <option value="Energia">
+                                Energia
+                            </option>
+
+                            <option value="Combustível">
+                                Combustível
+                            </option>
+
+                            <option value="Manutenção">
+                                Manutenção
+                            </option>
+
+                            <option value="Outros">
+                                Outros
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- VALOR -->
+                    <div class="finance-field">
+
+                        <label for="valor">
+                            Valor
+                        </label>
+
+                        <input
+                            type="number"
+                            id="valor"
+                            step="0.01"
+                            min="0"
+                            placeholder="0,00"
+                        >
+
+                    </div>
+
+
+                    <!-- DATA -->
+                    <div class="finance-field">
+
+                        <label for="data">
+                            Data
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                        >
+
+                    </div>
+
+
+                    <!-- BOTÃO -->
+                    <button
+                        type="submit"
+                        class="finance-button"
+                    >
+                        + Adicionar movimentação
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- FILTROS -->
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            CONSULTA
+                        </span>
+
+                        <h2>
+                            Pesquisar movimentações
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="finance-form">
+
+                    <!-- PESQUISA -->
+                    <div class="finance-field">
+
+                        <label for="pesquisa">
+                            Pesquisar
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pesquisa"
+                            placeholder="Digite uma descrição ou categoria"
+                        >
+
+                    </div>
+
+
+                    <!-- PERÍODO -->
+                    <div class="finance-field">
+
+                        <label for="periodo">
+                            Período
+                        </label>
+
+                        <select id="periodo">
+
+                            <option value="todos">
+                                Todos
+                            </option>
+
+                            <option value="30">
+                                Últimos 30 dias
+                            </option>
+
+                            <option value="60">
+                                Últimos 60 dias
+                            </option>
+
+                            <option value="90">
+                                Últimos 90 dias
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- TIPO -->
+                    <div class="finance-field">
+
+                        <label for="filtroTipo">
+                            Tipo
+                        </label>
+
+                        <select id="filtroTipo">
+
+                            <option value="todos">
+                                Todos
+                            </option>
+
+                            <option value="entrada">
+                                Lucros / Receitas
+                            </option>
+
+                            <option value="despesa">
+                                Despesas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECEITAS -->
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            RECEITAS
+                        </span>
+
+                        <h2>
+                            Serviços recebidos
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="finance-table">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Serviço
+                                </th>
+
+                                <th>
+                                    Categoria
+                                </th>
+
+                                <th>
+                                    Data
+                                </th>
+
+                                <th>
+                                    Valor
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Ação
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="tabelaReceitas">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- DESPESAS -->
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            DESPESAS
+                        </span>
+
+                        <h2>
+                            Gastos da empresa
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="finance-table">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Despesa
+                                </th>
+
+                                <th>
+                                    Categoria
+                                </th>
+
+                                <th>
+                                    Data
+                                </th>
+
+                                <th>
+                                    Valor
+                                </th>
+
+                                <th>
+                                    Ação
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="tabelaDespesas">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="financeiro.js"></script>
+
+</body>
+
+</html>

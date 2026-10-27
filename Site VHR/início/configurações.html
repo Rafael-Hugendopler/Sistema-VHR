@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VHR Truck Center | Configurações</title>
+
+    <link rel="stylesheet" href="projeto.css">
+</head>
+
+<body>
+
+    <div class="system">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo-area">
+
+                <div class="logo">
+                    <img src="logo-vhr-transparente.png" alt="VHR Truck Center">
+                </div>
+
+                <div class="brand">
+                    <strong>TRUCK CENTER</strong>
+                    <span>MECÂNICA DIESEL</span>
+                </div>
+
+            </div>
+
+
+            <div class="menu">
+
+                <p class="menu-title">
+                    MENU PRINCIPAL
+                </p>
+
+                <a href="dashboard.html" class="menu-item">
+                    <span>⌂</span> Dashboard
+                </a>
+
+                <a href="../clientes/clientes.html" class="menu-item">
+                    <span>♙</span> Clientes
+                </a>
+
+                <a href="../veículos/veiculos.html" class="menu-item">
+                    <span>▣</span> Veículos
+                </a>
+
+                 <a href="../serviços/ordem-servico.html" class="menu-item">
+                <span>⚙</span>
+                Ordem de Serviço
+                </a>
+
+                <a href="../peças/peças.html" class="menu-item">
+                    <span>▤</span> Peças
+                </a>
+
+                <a href="financeiro.html" class="menu-item">
+                    <span>R$</span> Financeiro
+                </a>
+
+
+                <p class="menu-title sistema-title">
+                    SISTEMA
+                </p>
+
+                <a href="configurações.html" class="menu-item active">
+                    <span>⚙</span> Configurações
+                </a>
+
+                <a href="projeto.html" class="logout">
+                    ↪ Sair
+                </a>
+
+            </div>
+
+
+            <div class="user-area">
+
+                <div class="user-name">
+                    VH
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Usuário ativo</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="welcome">
+                        SISTEMA
+                    </p>
+
+                    <h1>
+                        Configurações
+                    </h1>
+
+                    <p class="subtitle">
+                        Gerencie as configurações do sistema da VHR Truck Center.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- PERFIL -->
+            <section class="panel settings-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            CONTA
+                        </span>
+
+                        <h2>
+                            Perfil do administrador
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+                    <div class="form-group">
+
+                        <label for="nome">
+                            NOME
+                        </label>
+
+                        <input type="text" id="nome" value="Administrador">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-MAIL
+                        </label>
+
+                        <input type="email" id="email" value="jpplays2010">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="usuario">
+                            USUÁRIO
+                        </label>
+
+                        <input type="text" id="usuario" value="admin">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="telefone">
+                            TELEFONE
+                        </label>
+
+                        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button type="button" class="save-button" onclick="salvarConfiguracoes()">
+                        ✓ Salvar alterações
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- SEGURANÇA -->
+            <section class="panel settings-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SEGURANÇA
+                        </span>
+
+                        <h2>
+                            Senha de acesso
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+                    <div class="form-group">
+
+                        <label for="senha-atual">
+                            SENHA ATUAL
+                        </label>
+
+                        <input type="password" id="senha-atual" placeholder="Digite sua senha atual">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="nova-senha">
+                            NOVA SENHA
+                        </label>
+
+                        <input type="password" id="nova-senha" placeholder="Digite a nova senha">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmar-senha">
+                            CONFIRMAR NOVA SENHA
+                        </label>
+
+                        <input type="password" id="confirmar-senha" placeholder="Confirme a nova senha">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button type="button" class="save-button" onclick="alterarSenha()">
+                        ✓ Alterar senha
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- PREFERÊNCIAS -->
+            <section class="panel settings-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            PREFERÊNCIAS
+                        </span>
+
+                        <h2>
+                            Preferências do sistema
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="preference-list">
+
+                    <div class="preference-item">
+
+                        <div>
+
+                            <strong>
+                                Notificações do sistema
+                            </strong>
+
+                            <small>
+                                Receber avisos sobre serviços e estoque.
+                            </small>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="preference-item">
+
+                        <div>
+
+                            <strong>
+                                Alertas de estoque
+                            </strong>
+
+                            <small>
+                                Avisar quando uma peça estiver com estoque baixo.
+                            </small>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="preference-item">
+
+                        <div>
+
+                            <strong>
+                                Confirmação ao excluir
+                            </strong>
+
+                            <small>
+                                Solicitar confirmação antes de excluir registros.
+                            </small>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SISTEMA -->
+            <section class="panel settings-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SISTEMA
+                        </span>
+
+                        <h2>
+                            Informações
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="system-info">
+
+                    <div>
+                        <span>VERSÃO DO SISTEMA</span>
+                        <strong>VHR Truck Center 1.0</strong>
+                    </div>
+
+                    <div>
+                        <span>STATUS</span>
+                        <strong class="online">
+                            ● Sistema operacional
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>PERFIL</span>
+                        <strong>Administrador</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script>
+        function salvarConfiguracoes() {
+
+            alert(
+                "Configurações salvas com sucesso!"
+            );
+
+        }
+
+
+        function alterarSenha() {
+
+            const novaSenha =
+                document.getElementById("nova-senha").value;
+
+            const confirmarSenha =
+                document.getElementById("confirmar-senha").value;
+
+
+            if (novaSenha === "" || confirmarSenha === "") {
+
+                alert(
+                    "Preencha os campos de nova senha."
+                );
+
+                return;
+            }
+
+
+            if (novaSenha !== confirmarSenha) {
+
+                alert(
+                    "As senhas não são iguais."
+                );
+
+                return;
+            }
+
+
+            alert(
+                "Senha alterada com sucesso!"
+            );
+
+        }
+    </script>
+
+</body>
+
+</html>
