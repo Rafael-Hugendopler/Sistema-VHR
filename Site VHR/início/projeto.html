@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,320 +8,151 @@
 
     <title>VHR Truck Center | Login</title>
 
-    <link rel="stylesheet" href="projeto.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
-<body class="login-page">
+<body>
 
-    <main class="login-container">
+    <main>
 
-        <!-- =========================================
-             LADO ESQUERDO
-             ========================================= -->
+        <div class="logo-container">
+            <img
+                src="logo-vhr-transparente.png"
+                alt="Logo VHR Truck Center"
+            >
+        </div>
 
-        <section class="login-brand">
+        <div class="login-content">
 
-            <!-- IMAGEM DE FUNDO DA OFICINA -->
-            <div class="background-image"></div>
+            <!-- CABEÇALHO -->
+            <div class="login-header">
 
-            <!-- CONTEÚDO SOBRE A IMAGEM -->
-            <div class="brand-content">
+                <span class="login-label">
+                    🔒 ACESSO RESTRITO
+                </span>
 
-                <!-- LOGO VHR -->
-                <div class="brand-header">
+                <h2>Bem-vindo de volta</h2>
 
-                    <img
-                        src="logo-vhr-transparente.png"
-                        alt="Logo VHR Truck Center"
-                        class="brand-logo"
-                    >
+                <p>
+                    Entre com suas credenciais para
+                    acessar o sistema.
+                </p>
 
-                    <div class="brand-text">
+            </div>
 
-                        <h1>VHR TRUCK CENTER</h1>
+            <!-- FORMULÁRIO -->
+            <form action="dashboard.html">
 
-                        <span>MECÂNICA DIESEL</span>
+                <!-- USUÁRIO -->
+                <div class="input-group">
 
-                    </div>
+                    <label for="usuario">USUÁRIO</label>
 
-                </div>
+                    <div class="input-wrapper">
 
-
-                <!-- TEXTO PRINCIPAL -->
-                <div class="brand-description">
-
-                    <h2>
-                        Qualidade de Serviços
-                        <br>
-                        <span>para seu veículo.</span>
-                    </h2>
-
-                    <p>
-                        Tudo o que sua oficina precisa,
-                        em um só lugar.
-                    </p>
-
-                </div>
-
-
-                <!-- RECURSOS -->
-                <div class="recursos">
-
-                    <div class="recurso">
-
-                        <span class="recurso-icon">
+                        <span class="input-icon" aria-hidden="true">
                             👤
                         </span>
 
-                        <div>
-                            <strong>Clientes</strong>
-                            <small>Cadastros</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="recurso">
-
-                        <span class="recurso-icon">
-                            🚛
-                        </span>
-
-                        <div>
-                            <strong>Veículos</strong>
-                            <small>Controle</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="recurso">
-
-                        <span class="recurso-icon">
-                            🔧
-                        </span>
-
-                        <div>
-                            <strong>Serviços</strong>
-                            <small>Manutenção</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="recurso">
-
-                        <span class="recurso-icon">
-                            💰
-                        </span>
-
-                        <div>
-                            <strong>Financeiro</strong>
-                            <small>Gestão</small>
-                        </div>
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            placeholder="Digite seu usuário"
+                            autocomplete="username"
+                            required
+                        >
 
                     </div>
 
                 </div>
 
+                <!-- SENHA -->
+                <div class="input-group">
 
-                <!-- LINHA -->
-                <div class="brand-line"></div>
+                    <label for="senha">SENHA</label>
 
+                    <div class="input-wrapper">
 
-                <!-- RODAPÉ ESQUERDO -->
-                <span class="brand-footer">
-                    SISTEMA DE GESTÃO • VHR TRUCK CENTER
-                </span>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             LADO DIREITO - LOGIN
-             ========================================= -->
-
-        <section class="login-box">
-
-            <div class="login-content">
-
-
-                <!-- CABEÇALHO -->
-                <div class="login-header">
-
-                    <span class="login-label">
-                        🔒 ACESSO RESTRITO
-                    </span>
-
-                    <h2>
-                        Bem-vindo de volta
-                    </h2>
-
-                    <p>
-                        Entre com suas credenciais para
-                        acessar o sistema.
-                    </p>
-
-                </div>
-
-
-
-                <!-- FORMULÁRIO -->
-                <form action="dashboard.html">
-
-
-                    <!-- USUÁRIO -->
-                    <div class="input-group">
-
-                        <label for="usuario">
-                            USUÁRIO
-                        </label>
-
-                        <div class="input-wrapper">
-
-                            <span class="input-icon">
-                                
-                            </span>
-
-                            <input
-                                type="text"
-                                id="usuario"
-                                name="usuario"
-                                placeholder="Digite seu usuário"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- SENHA -->
-                    <div class="input-group">
-
-                        <label for="senha">
-                            SENHA
-                        </label>
-
-                        <div class="input-wrapper">
-
-                            <span class="input-icon">
-                                
-                            </span>
-
-                            <input
-                                type="password"
-                                id="senha"
-                                name="senha"
-                                placeholder="Digite sua senha"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- OPÇÕES -->
-                    <div class="login-options">
-
-                        <label class="remember">
-
-                            <input
-                                type="checkbox"
-                                onclick="mostrarSenha()"
-                            >
-
-                            <span>
-                                Mostrar senha
-                            </span>
-
-                        </label>
-
-
-                        <a href="#">
-                            Esqueci minha senha
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- BOTÃO -->
-                    <button
-                        type="submit"
-                        class="login-button"
-                    >
-
-                        <span>
-                            ENTRAR NO SISTEMA
+                        <span class="input-icon" aria-hidden="true">
+                            🔑
                         </span>
 
-                        <strong>
-                            →
-                        </strong>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
 
-                    </button>
-
-                </form>
-
-
-
-                <!-- STATUS -->
-                <div class="login-status">
-
-                    <span class="status-dot"></span>
-
-                    Sistema operacional
+                    </div>
 
                 </div>
 
+                <!-- OPÇÕES -->
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="mostrar-senha"
+                            onchange="mostrarSenha()"
+                        >
+
+                        <span>Mostrar senha</span>
+
+                    </label>
+
+                    <a href="#" onclick="return false;">
+                        Esqueci minha senha
+                    </a>
+
+                </div>
+
+                <!-- BOTÃO -->
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    <span>ENTRAR NO SISTEMA</span>
+
+                    <strong aria-hidden="true">→</strong>
+
+                </button>
+
+            </form>
+
+            <!-- STATUS -->
+            <div class="login-status">
+
+                <span class="status-dot"></span>
+
+                Sistema operacional
 
             </div>
 
+        </div>
 
-
-            <!-- RODAPÉ DIREITO -->
-            <div class="login-footer">
-
-                © 2026 VHR Truck Center
-
-            </div>
-
-        </section>
+        <!-- RODAPÉ -->
+        <div class="login-footer">
+            © 2026 VHR Truck Center
+        </div>
 
     </main>
 
-
-
-    <!-- =========================================
-         JAVASCRIPT
-         ========================================= -->
-
     <script>
-
         function mostrarSenha() {
 
-            const senha =
-                document.getElementById("senha");
+            const senha = document.getElementById("senha");
+            const checkbox = document.getElementById("mostrar-senha");
 
-            if (senha.type === "password") {
-
-                senha.type = "text";
-
-            } else {
-
-                senha.type = "password";
-
-            }
+            senha.type = checkbox.checked ? "text" : "password";
 
         }
-
     </script>
 
 </body>
